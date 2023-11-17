@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPW Scanlator</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        <nav class="navbar">
+            <ul>
+                <li><a class="nav-link active" href="index.html">Home</a></li>
+                <li><a class="nav-link" href="about.html">About</a></li>
+                <li><a class="nav-link" href="form.html">Login</a></li>
+                <li><a class="nav-link" href="formAction.html">Informativo</a></li>
+            </ul>
+        </nav>
+        <div class="icons">
+            <div class="menu-container" id="menu-container">
+                <div class="menu-icon"></div>
+            </div>
+        
+            <div class="search-container" id="search-container">
+                <div class="search-icon"></div>
+            </div>
+        
+            <div class="heart-container" id="heart-container">
+                <div class="heart"></div>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="banner">
+        <img decoding="async" src="images/fundodois.jpg" class="bg">
+    </div>
+    <div class="Cadastro">
+        <span class="icon-close"><ion-icon name="close-outline"></ion-icon></span>
+        <div class="Form-box register">
+            <h1>Cadastro</h1>
+            <form action="formAction.html" method="GET">
+                <div class="input-box">
+                    <span class="icon"></span>
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                </div>
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="acceptTerms" required>Aceitar termos e Condicões</label>
+                </div>
+                <button type="submit" class="btn">Cadastrar</button>
+                <div class="login-register">
+                    <p>Ja possui uma conta? <a href="#" class="login-link">Login</a></p>
+                </div>
+            </form>
+        </div>
+        <div class="Form-box login">
+            <h1>Login</h1>
+            <form action="#">
+                <div class="input-box">
+                    <input type="email" required>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <input type="password" required>
+                    <label>Password</label>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Lembre-me</label>
+                    <a href="#">Esqueceu a senha?</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="login-register">
+                    <p>Não possui uma conta? <a href="#" class="register-link">Registrar</a></p>
+                </div>
+            </form>
+        </div>
+    </div>    
+    <div class="copyright container">
+        <a href="index.html" id="logo">
+            <img src="images/logo.png" alt="Logo">
+        </a>
+        <p>&#169; FPWdesign. All rights reserved.</p>
+    </div>
+    <script src="js/main.js" defer data-deferred="1"></script> </body>
+    <script src="js/login.js"></script>
+</body>
+</html>

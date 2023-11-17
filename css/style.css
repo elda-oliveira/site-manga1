@@ -1,0 +1,757 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap');
+
+/* Definindo variáveis CSS para cores e box-shadow */
+:root {
+    --red: #E50914;
+    --black: #000000;
+    --light-color: #181818;
+    --box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .1);
+}
+
+/* Resetando estilos padrão para todos os elementos */
+* {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    transition: all .2s linear;
+}
+/* Definindo a cor de fundo do corpo como a cor claro definida nas variáveis CSS */
+body {
+    background-color: var(--light-color);
+}
+
+/* Definindo o tamanho da fonte base, desabilitando a rolagem horizontal e definindo o padding superior da rolagem */
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+}
+
+/* Adicionando padding às seções */
+section {
+    padding: 2rem 9%;
+}
+
+/* Alternando a cor de fundo das seções ímpares */
+section:nth-child(even) {
+    background: var(--light-color);
+}
+
+
+/* Definindo o cabeçalho como fixo e com uma sombra */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    box-shadow: var(--box-shadow);
+}
+
+/* Definindo o título e adicionando uma margem inferior */
+.heading {
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 3rem;
+    font-size: 4rem;
+}
+
+/* Definindo o botão e adicionando uma transição de cor de fundo */
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--red);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+/* Define o estilo para o botão quando o mouse passa sobre ele */
+.btn:hover {
+    background: var(--black);
+    color: var(--red);
+    letter-spacing: .1rem;
+}
+
+/* Define o estilo para os links dentro da barra de navegação do cabeçalho */
+header .navbar a {
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding: .5rem 1.5rem;
+    color: #fff;
+}
+
+/* Define o estilo para o link ativo e para quando o mouse passa sobre ele */
+header .navbar a.active,
+header .navbar a:hover {
+    color: #fff;
+    background: var(--red);
+}
+
+/* Define o estilo para o container de ícones */
+.icons {
+    display: flex;
+    flex-wrap: nowrap;
+}
+  
+.heart-container,
+.search-container,
+.menu-container{
+  flex-direction: column;
+  margin-right: 10px;
+}
+
+.heart,
+.search-icon,
+.menu-icon {
+  margin-bottom: 10px;
+}
+
+/* Define o estilo para o container de ícones */
+.heart-container,
+.search-container,
+.menu-container {
+    width: 45px;
+    height: 45px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+ /* Define o estilo para o ícone de coração */ 
+.heart {
+    width: 24px;
+    height: 24px;
+    background-color: white;
+    clip-path: path("M12 4.248c-3.148-5.402-12-3.825-12 2.944 0 4.661 5.571 9.427 12 15.808 6.43-6.381 12-11.147 12-15.808 0-6.792-8.875-8.306-12-2.944z");
+    transition: background-color 0.3s, transform 0.3s;
+    position: relative; 
+    top: 10%; 
+}
+
+ /* Define o estilo para quando o mouse passa sobre o container de coração */ 
+.heart-container:hover,
+.heart-container.active {
+    background-color: white;
+}
+
+ /* Define o estilo para quando o mouse passa sobre o ícone de coração */ 
+.heart-container:hover .heart,
+.heart-container.active .heart {
+    background-color: red;
+    transform: scale(1.2) rotate(360deg);
+}
+  
+  /* Define o estilo para o ícone de pesquisa */
+.search-icon {
+     color: #fff;
+     margin-top:-5px;
+     margin-left: -4px;
+     width: 12px;
+     height: 12px;
+     border: solid 2px currentColor;
+     border-radius: 100%;
+     -webkit-transform: rotate(-45deg);
+             transform: rotate(-45deg);
+             position: relative; 
+             top: 10%;           
+}
+
+/* Define o estilo para o pseudo-elemento :before do ícone de pesquisa */
+.search-icon:before {
+     content: '';
+     position: absolute;
+     top: 12px;
+     left: 4px;
+     height: 6px;
+     width: 2px;
+     background-color: currentColor;
+    
+}
+   
+  /* Define o estilo para quando o mouse passa sobre o container de pesquisa */
+.search-container:hover,
+.search-container.active {
+       background-color: white;
+}
+
+ /* Define o estilo para quando o mouse passa sobre o container de pesquisa */  
+.search-container:hover .search-icon,
+.search-container.active .search-icon,
+.search-container:hover .search-icon:before,
+.search-container.active .search-icon:before {
+       color: red;
+       transform: scale(1.2) rotate(360deg);
+} 
+  
+/* Define o estilo para o ícone de menu */
+.menu-icon {
+    color: #fff;
+    margin-left: 2px;
+    margin-top: 55px;
+    width: 17px;
+    height: 2px;
+    background-color: currentColor;
+    position: relative; 
+    top: -50%; 
+}
+
+  /* Define o estilo para o pseudo-elemento :before do ícone de menu */
+.menu-icon:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 17px;
+    height: 2px;
+    background-color: currentColor;
+}
+
+  /* Define o estilo para o pseudo-elemento :after do ícone de menu */
+.menu-icon:after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 17px;
+    height: 2px;
+    background-color: currentColor;
+}
+
+/* Define o estilo para o carrossel */
+.carousel {
+    position: relative;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
+    margin-top: 26px;
+}
+
+/* Define o estilo para o container interno do carrossel */
+.carousel-inner {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Define o estilo para o item do carrossel quando está selecionado */
+.carousel-open:checked + .carousel-item {
+    position: static;
+    opacity: 100;
+}
+
+/* Define o estilo para o item do carrossel */
+.carousel-item {
+    min-height: 100vh;
+    opacity: 0;
+    -webkit-transition: opacity 0.6s ease-out;
+    transition: opacity 0.6s ease-out;
+    width: 100%;
+    position: absolute;
+    height: 50.25vw; 
+    overflow: hidden; 
+    
+}
+
+/* Define o estilo para a imagem dentro do item do carrossel */
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; 
+    background-size: cover !important;
+    background-position: center !important;
+    z-index: 0;
+}
+
+/* Define o estilo para o controle do carrossel */
+.carousel-control {
+    background: rgba(0, 0, 0, 0.28);
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    font-size: 40px;
+    height: 40px;
+    line-height: 35px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    cursor: pointer;
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    text-align: center;
+    width: 40px;
+    z-index: 10;
+}
+
+/* Define o estilo para o controle de navegação do carrossel, especificamente para o botão de navegação anterior */
+.carousel-control.prev {
+    left: 2%;
+}
+
+/* Define o estilo para o controle de navegação do carrossel, especificamente para o botão de navegação seguinte */
+.carousel-control.next {
+    right: 2%;
+}
+
+/* Define o estilo para quando o mouse passa sobre o controle de navegação do carrossel */
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+    color: #aaaaaa;
+}
+
+/* Define o estilo para os controles do carrossel quando estão selecionados */
+#carousel-1:checked ~ .control-1,
+#carousel-2:checked ~ .control-2,
+#carousel-3:checked ~ .control-3,
+#carousel-4:checked ~ .control-4 {
+    display: block;
+}
+
+/* Define o estilo para os indicadores do carrossel */
+.carousel-indicators {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 2%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 10;
+}
+
+/* Define o estilo para os itens dos indicadores do carrossel */
+.carousel-indicators li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+/* Define o estilo para os marcadores do carrossel */
+.carousel-bullet {
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 35px;
+}
+
+/* Define o estilo para quando o mouse passa sobre os marcadores do carrossel */
+.carousel-bullet:hover {
+    color: #aaaaaa;
+}
+
+/* Define o estilo para os marcadores do carrossel quando estão selecionados */
+#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet,
+#carousel-4:checked ~ .control-4 ~ .carousel-indicators li:nth-child(4) .carousel-bullet {
+    color: #428bca;
+}
+
+
+#title {
+    width: 100%;
+    position: absolute;
+    padding: 0px;
+    margin: 0px auto;
+    text-align: center;
+    font-size: 27px;
+    color: rgba(255, 255, 255, 1);
+    font-family: 'Open Sans', sans-serif;
+    z-index: 9999;
+    text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), -1px 0px 2px rgba(255, 255, 255, 0);
+}
+
+
+.home {
+    padding: 0;
+}
+
+
+.home .carousel-item .carousel-content  {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 53rem;
+    z-index: 1;
+    
+
+}
+
+.home .carousel-item .carousel-content h3 {
+    font-size: 6rem;
+    color: #fff;
+    padding-top: .5rem;
+    text-transform: uppercase;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.9);
+
+}
+
+.home .carousel-item .carousel-content  p {
+    line-height: 2;
+    color: #fff;
+    font-size: 1.9rem;
+    padding: 2rem 0;
+    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.banner .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin-top: 60px;
+}
+
+.banner .content h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 60px;
+}
+
+.banner .content p {
+    font-size: 1.7em;
+    font-weight: 300;
+    line-height: 1.5em;
+    color: rgb(255, 255, 255);
+    margin: 5px 0 20px;
+    font-weight: bolder;
+}
+
+.Cadastro {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: height .2s ease;
+}
+
+.Cadastro.active {
+    height: 520px;
+}
+
+.Cadastro .Form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.Cadastro .Form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+
+.Cadastro.active .Form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.Cadastro .Form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.Cadastro.active .Form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.Cadastro .btn {
+    width: 100%;
+    height: 45px;
+    background: #de0611;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.Form-box h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #000;
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label {
+    top: -5px;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+
+.remember-forgot {
+    font-size: 1.5rem;
+    color: #000;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #000;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #000;
+    text-decoration: underline;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.login-register {
+    font-size: 1.5rem;
+    color: #000;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+
+.info-table {
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    height: 400px;
+    transform: translateX(-50%);
+    width: 90%;
+    margin: auto;
+    max-width: 400px;
+    background: transparent;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.info-table td {
+    padding: 20px;
+    font-weight: 500;
+    background: transparent;
+    text-align: left;
+    font-size: 1.5rem;
+    margin: 25px 0 10px;
+    border-bottom: 2px solid #000;
+    color: #fff;
+}
+
+.info-table tr:first-child td {
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    text-transform: uppercase;
+    border-bottom: none;
+    transform: translateY(-30px);
+}
+
+.info-table .field-label {
+    color: #000;
+}
+
+
+.copyright {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.copyright .logo {
+    color: var(--red);
+    font-size: 2.1rem;
+    font-weight: bolder;
+}
+
+.copyright p {
+    font-size: 0.9rem;
+    color: var(--red);
+    font-size: 2rem;
+}
+
+header .navbar li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+
+/* media query */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+
+    }
+
+    header {
+        padding: 1rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+   
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--black);
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: var(--red);
+
+    }
+
+    header .navbar li {
+        display: block;
+    }
+
+    .home .box .content h3 {
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+
+    }
+
+}
+
+
+@media screen and (max-width: 768px) {
+    .home .carousel-item .carousel-content {
+        width: 90%; 
+        left: 5%;
+    }
+
+    .home .carousel-item .carousel-content h3 {
+        font-size: 5rem; 
+    }
+}
+
+
+.menu-container {
+    @media only screen and (min-width: 769px) {
+        display: none;
+    }
+}
