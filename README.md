@@ -1,56 +1,65 @@
-Site do Scanlator FPW 
+# README - FPW Scanlator Website
 
-Visão geral 
+## Overview
 
-Este repositório contém o código-fonte do site FPW Scanlator, uma plataforma dedicada a hospedar e traduzir conteúdo de mangá do japonês, chinês e outras culturas asiáticas. Os usuários podem explorar e contribuir com traduções, enquanto artistas independentes podem apresentar seus trabalhos. O site está equipado com recursos como cadastro de usuário, login e seção informativa.
+This repository contains the source code for the FPW Scanlator website, a platform dedicated to hosting and translating manga content from Japanese, Chinese, and other Asian cultures. Users can explore and contribute translations, while independent artists can showcase their work. The website is equipped with features like user registration, login, and an informative section.
 
-Índice
-Começando
-Estrutura de arquivo
-Uso
-Contribuindo
-Licença
-Começando
-Para executar o site do FPW Scanlator localmente, siga estas etapas:
+## Table of Contents
 
-Clone o repositório:
+- [Getting Started](#getting-started)
+- [File Structure](#file-structure)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
-festa
+## Getting Started
 
-Copiar código
-git clone https://github.com/your-username/fpw-scanlator.git
-Abra o projeto em seu editor de código preferido.
+To run the FPW Scanlator website locally, follow these steps:
 
-Abra o index.htmlarquivo em seu navegador para visualizar a página inicial.
+1. Clone the repository:
 
-Estrutura de arquivo
-A estrutura do projeto está organizada da seguinte forma:
+    ```bash
+    git clone https://github.com/your-username/fpw-scanlator.git
+    ```
 
-index.html: Página inicial do site do FPW Scanlator.
-form.html: Página de login do usuário e formulário de registro.
-formAction.html: página informativa vinculada à página do formulário.
-about.html: página Sobre nós que fornece informações sobre o FPW Scanlator.
-css/: Diretório contendo folhas de estilo.
-style.css: folha de estilo principal do site.
-images/: diretório que contém ativos de imagem.
-js/: Diretório contendo arquivos JavaScript.
-main.js: Arquivo JavaScript principal do site.
-form.js: arquivo JavaScript para funcionalidade relacionada ao formulário.
-login.js: arquivo JavaScript para funcionalidade relacionada ao login.
-Uso
-O site do FPW Scanlator foi projetado para ser fácil de usar. Os usuários podem navegar pelas páginas inicial, de login, de registro e sobre usando os links de navegação fornecidos. O site também é responsivo, garantindo uma experiência perfeita em diversos dispositivos.
+2. Open the project in your preferred code editor.
 
-Contribuindo
-Se você deseja contribuir para o desenvolvimento do FPW Scanlator, siga estes passos:
+3. Open the `index.html` file in your web browser to view the home page.
 
-Bifurque o repositório.
-Crie um novo branch para seu recurso ou correção de bug.
-Faça suas alterações e confirme-as.
-Envie suas alterações para seu fork.
-Envie uma solicitação pull para o repositório principal.
-Licença
-Este projeto está licenciado sob a Licença MIT . Sinta-se à vontade para usar, modificar e distribuir o código para seus propósitos.
+## File Structure
 
-Para obter mais detalhes, consulte o arquivo LICENSE .
+The project structure is organized as follows:
 
-Obrigado por usar o FPW Scanlator! Se você tiver alguma dúvida ou problema, abra um problema 
+- `index.html`: Home page of the FPW Scanlator website.
+- `form.html`: User login and registration form page.
+- `formAction.html`: Informational page linked from the form page.
+- `about.html`: About Us page providing information about FPW Scanlator.
+- `css/`: Directory containing stylesheets.
+  - `style.css`: Main stylesheet for the website.
+- `images/`: Directory holding image assets.
+- `js/`: Directory containing JavaScript files.
+  - `main.js`: Main JavaScript file for the website.
+  - `form.js`: JavaScript file for form-related functionality.
+  - `login.js`: JavaScript file for login-related functionality.
+
+## Usage
+
+The FPW Scanlator website is designed to be user-friendly. Users can navigate through the home, login, registration, and about pages using the provided navigation links. The site is also responsive, ensuring a seamless experience on various devices.
+
+## Contributing
+
+If you wish to contribute to the development of FPW Scanlator, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request to the main repository.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use, modify, and distribute the code for your purposes.
+
+For more details, refer to the [LICENSE](LICENSE) file.
+
+Thank you for using FPW Scanlator! If you have any questions or issues, please open an [issue](https://github.com/your-username/fpw-scanlator/issues).
