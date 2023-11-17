@@ -1,4 +1,5 @@
 Site do Scanlator FPW 
+
 Visão geral 
 
 Este repositório contém o código-fonte do site FPW Scanlator, uma plataforma dedicada a hospedar e traduzir conteúdo de mangá do japonês, chinês e outras culturas asiáticas. Os usuários podem explorar e contribuir com traduções, enquanto artistas independentes podem apresentar seus trabalhos. O site está equipado com recursos como cadastro de usuário, login e seção informativa.
